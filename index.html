@@ -210,16 +210,13 @@ color: #F30C0C;
 </div><div id="./reactjs/one/01_slide" class="slide " data-transition="none"><div class="content " ref="./reactjs/one/01_slide/12">
 <h1>Creating Components</h1>
 
-<pre class="sh_javascript"><code>  Link = React.createClass({
+<pre class="sh_javascript"><code>  Hello = React.createClass({
     render: function(){
-      return React.DOM.a(
-          {href: '#'},
-          {this.props.text}
-        );
+      return React.DOM.h1(null, "Hello World!");
     }
   })
 
-  React.renderComponent(Link({text: 'Home'}), document.body);</code></pre></div>
+  React.renderComponent(Hello(), document.getElementById("app"));</code></pre></div>
 </div><div id="./reactjs/one/01_slide" class="slide " data-transition="none"><div class="content " ref="./reactjs/one/01_slide/13">
 <h1>Creating Components</h1>
 
@@ -227,26 +224,23 @@ color: #F30C0C;
 
 <pre class="sh_javascript"><code>  /** @jsx React.DOM */
 
-  Link = React.createClass({
+  Hello = React.createClass({
     render: function(){
-      return &lt;a href='#'&gt;{this.props.text}&lt;/a&gt;
+      return &lt;h1&gt;{"Hello World!"}&lt;/h1&gt;
     }
   })
 
-  React.renderComponent(&lt;Link text='Home' /&gt;, document.body);</code></pre></div>
+  React.renderComponent(&lt;Hello /&gt;, document.getElementById("app"));</code></pre></div>
 </div><div id="./reactjs/one/01_slide" class="slide " data-transition="none"><div class="content " ref="./reactjs/one/01_slide/14">
 <h1>jsx compiles to...</h1>
 
-<pre class="sh_javascript"><code>  Link = React.createClass({
+<pre class="sh_javascript"><code>  Hello = React.createClass({
     render: function(){
-      return React.DOM.a(
-          {href: '#'},
-          {this.props.text}
-        );
+     return React.DOM.h1(null, "Hello World!");
     }
   })
 
-  React.renderComponent(Link({text: 'Home'}), document.body);</code></pre></div>
+  React.renderComponent(Hello(), document.getElementById("app"));</code></pre></div>
 </div><div id="./reactjs/one/01_slide" class="slide bullets incremental" data-transition="none"><div class="content bullets incremental" ref="./reactjs/one/01_slide/15">
 <h1>REACT KEY CONCEPTS</h1>
 
